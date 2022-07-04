@@ -2,14 +2,27 @@
 {
     Properties
     {
+        //Number
+        _Int ("Int", Int) = 1
+        _Float ("Float", Float) = 1.5
+        _Range ("Range", Range(0.0, 5.0)) = 3.0
+
+        //Colors and Vectors
         _Color ("Color", Color) = (1,1,1,1)
+        _Vector ("Vector", Vector) = (1,1,1,1)
+
+        //Textures
+        _2D ("2D", 2D) = ""{}
+        _3D ("3D", 3D) = "black"{}
+        _cube ("Cube", Cube) = "white" {}
+
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Opaque" "Queue" = "Transparent"}
         LOD 200
 
         CGPROGRAM
@@ -20,7 +33,6 @@
         #pragma target 3.0
 
         sampler2D _MainTex;
-
         struct Input
         {
             float2 uv_MainTex;
@@ -34,7 +46,7 @@
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
         // #pragma instancing_options assumeuniformscaling
         UNITY_INSTANCING_BUFFER_START(Props)
-            // put more per-instance properties here
+        // put more per-instance properties here
         UNITY_INSTANCING_BUFFER_END(Props)
 
         void surf (Input IN, inout SurfaceOutputStandard o)
