@@ -2,8 +2,8 @@
 {
     Properties
     {
-        //Number
-        _Int("Int", Int) = 1
+        //定义反射率
+        _albedo("Albedo", Range(0, 1)) = 1
     }
     SubShader
     {
@@ -17,9 +17,10 @@
             float4 color : Color;
         };
 
+        float _albedo; //使用前先声明
         void surf(Input IN, inout SurfaceOutput o)
         {
-            o.Albedo = 1;
+            o.Albedo = _albedo;
         }
         ENDCG
     }

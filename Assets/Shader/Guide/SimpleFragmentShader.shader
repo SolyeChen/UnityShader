@@ -3,7 +3,7 @@
     Properties
     {
         //Number
-        _FragmentColor("Color", Color) = (1.0, 0.0, 0.0, 1.0)
+        _FragmentColor("Color", Color) = (1.0, 0.0, 0.0, 0.9)
     }
 
     //Unity会选择最适合GPU的subshader块
@@ -13,7 +13,6 @@
         Pass {
             // 开始Unity的shader
             CGPROGRAM
-
             //定义一个顶点程序, 名为vert
             #pragma vertex vert
             //定义一个片段程序, 名为frag
