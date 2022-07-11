@@ -8,7 +8,7 @@
     SubShader
     {
         Tags { "RenderType" = "Opaque"}
-
+        
         CGPROGRAM
         #pragma surface surf BlinnPhong
 
@@ -16,7 +16,7 @@
         {
             float4 color : Color;
         };
-
+        
         float _albedo; //使用前先声明
         void surf(Input IN, inout SurfaceOutput o)
         {
