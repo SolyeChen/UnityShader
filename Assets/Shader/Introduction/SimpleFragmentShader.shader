@@ -1,4 +1,4 @@
-﻿Shader "Custom/Simple Fragment Shader"  // 定义Shader的名字
+﻿Shader "Custom/Introduction/Simple Fragment Shader"  // 定义Shader的名字
 {
     Properties
     {

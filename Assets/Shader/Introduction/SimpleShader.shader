@@ -1,4 +1,4 @@
-﻿Shader "Custom/SimpleShader"
+﻿Shader "Custom/Introduction/impleShader"
 {
     Properties{
         //声明一个Color变量

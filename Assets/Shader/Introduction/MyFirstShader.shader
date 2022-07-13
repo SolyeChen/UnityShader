@@ -1,5 +1,5 @@
 ﻿// 这里指定 Shader 的名字,不要求跟文件名保持一致
-Shader "Custom/MyFirstShader"
+Shader "Custom/Introduction/MyFirstShader"
 {
     // Properties语义并不是必需的，可以选择不声明任何材质属性。
     // Inspector暴露的属性，如果需要在Pass中使用则需要在对应的Pass中使用类型再次声明，如 float4 _color

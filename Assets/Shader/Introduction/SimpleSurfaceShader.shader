@@ -1,4 +1,4 @@
-﻿Shader "Custom/Simple Surface Shader"
+﻿Shader "Custom/Introduction/Simple Surface Shader"
 {
     Properties
     {

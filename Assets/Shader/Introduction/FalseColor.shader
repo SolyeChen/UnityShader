@@ -1,6 +1,6 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "Unity Shaders Book/Chapter 5/False Color" {
+Shader "Custom/Introduction/False Color" {
 	SubShader {
 		Pass {
 			CGPROGRAM
