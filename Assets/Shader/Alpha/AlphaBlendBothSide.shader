@@ -14,20 +14,22 @@ Shader "Custom/Alpha/AlphaBlendBothSide"
         Tags { "Queue"="Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" }
         LOD 100
         
-        //该pass用于深度测试，剔除被自生遮挡的片元
+        ZWrite Off
+        Blend SrcAlpha OneMinusSrcAlpha
+
+        //剔除正面，先渲背面
+        Cull Front
         Pass
         {
+            Name "AlphaBlend"
             Tags { "LightMode" = "ForwardBase" }
-            Cull Front
 
             //透明混合一般会关闭深度写入
-            ZWrite Off
 
             //颜色混合
             //Blend SrcFactor DstFactor, SrcFactorA DstFactorA
 
             //Blend 源颜色 1-源
-            Blend SrcAlpha OneMinusSrcAlpha
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -83,13 +85,14 @@ Shader "Custom/Alpha/AlphaBlendBothSide"
             ENDCG
         }
 
+
+        //剔除背面，只渲染未处理的正面
+        Cull Back
         Pass
         {
             Tags { "LightMode" = "ForwardBase" }
 
             //透明混合一般会关闭深度写入
-            ZWrite Off
-            Cull Back
 
             //颜色混合
             //Blend SrcFactor DstFactor, SrcFactorA DstFactorA
