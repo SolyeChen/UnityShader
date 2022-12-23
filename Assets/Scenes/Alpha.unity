@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 401165309}
   - component: {fileID: 401165308}
   m_Layer: 0
-  m_Name: AlphaTestBothSide (2)
+  m_Name: AlphaBlendBothSide_complex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 1029947933}
   - component: {fileID: 1029947932}
   m_Layer: 0
-  m_Name: AlphaTestBothSide (1)
+  m_Name: AlphaBlendBothSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
